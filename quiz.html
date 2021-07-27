@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz by arush</title>
+	<style type="text/css">
+		::-webkit-scrollbar {
+  			display: none;
+		}
+		.dot {
+			position: relative;
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;top: 23px;
+			left: 25px;
+}
+		.option {
+			width: 1100px;
+			height: 80px;
+			border: 1px solid black;
+		}
+
+		button {
+			position: relative;
+			left: 50px;
+			width: 1250px;
+			background-color: orange;
+			color: white;
+			font-weight: bolder;
+			border: none;
+			height: 50px;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+	<h1 id="question">1. How often do you keep your words?</h1> <p>You need not select it. Just jot it. You cannot select it.</p><br><br><br>
+
+	<div  class="option"><span class="dot" id="dot1"></span>
+		<h3 style="position: relative; left: 100px; bottom: 20px;" id="option1">
+A. Gold Promise, I rarely go back on my words</h3>
+	</div><br><br>
+	<div class="option"><span class="dot" id="dot2"></span>
+		<h3 style="position: relative; left: 100px; bottom: 20px;" id="option2">B. Stone Promise, Someties go back (only with lots of thought)</h3>
+	</div><br><br>
+	<div class="option" style="width: 1150px;"><span class="dot" id="dot3"></span>
+		<h3 style="position: relative; left: 100px; bottom: 20px;" id="option3">Chocolate Promise, it can melt on the heater (tend to break promises)</h3>
+	</div><br><br><br><br>
+
+	<button onclick="next();" id="nextbtn">NEXT >></button>
+
+	</div>
+	<div id="utube" style="display: none;">
+<iframe width="953" height="536" src="https://www.youtube.com/embed/NZmKOQa5Cnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h1>Thank You! </h1>
+
+</div>
+
+	<script type="text/javascript">
+		function next() {
+			document.getElementById('question').innerHTML = "2. If I ask you to promise me to be honest on this what will you do ?";
+
+			document.getElementById('option1').innerHTML = "A. No probs";
+
+			document.getElementById('option2').innerHTML = " B. Hesitate because if I break it, what will happen?";
+
+			document.getElementById('option3').innerHTML = "Either make fake promise in no time or say 'I will not give you my word'";
+
+			document.getElementById("nextbtn").addEventListener("click", function() {
+  				nextone();
+			});
+		}
+
+		function nextone() {
+			document.getElementById('question').innerHTML = " 3. What will you do if someone wrongs you?";
+			document.getElementById('option1').innerHTML = "A. Don't bother, stay focused";
+			document.getElementById('option2').innerHTML = "B. Keep your words in your mouth, and try to hide that body language";
+			document.getElementById('option3').innerHTML = "C. Freely say whatever I want to, that person who wronged me needs to learn alesson never to mess up with me.";
+
+			document.getElementById('nextbtn').addEventListener("click", function() {
+				nexttwo();
+			});
+		}//end of nextone
+
+		function nexttwo() {
+			document.getElementById('question').innerHTML = "Let's say you are studying for an exam, and I keep your favourite things next to you (lets suppose you like watching cricket and I showed you a LIVE thrilling match of India)";
+			document.getElementById('option1').innerHTML = "A. Ignore it, do the work.";
+			document.getElementById('option2').innerHTML = "B. Why can't I multitask (you do the work and watch along) / Just go out of the room";
+			document.getElementById('option3').innerHTML = "C. Let me do my work later, My work i can postpone, but how can I do so for a LIVE match";
+
+			document.getElementById('nextbtn').addEventListener("click", function() {
+				nextthree();
+			});
+		} //end of nexttwo
+
+		function nextthree() {
+			document.getElementById('question').innerHTML = "5. Are you dependent on others for your work?";
+			document.getElementById('option1').innerHTML = "A. No / A little, but i have plan B (non dependent plan)";
+			document.getElementById('option2').innerHTML = "B. Maybe 10%";
+			document.getElementById('option3').innerHTML = "C. More than B";
+
+			document.getElementById('nextbtn').addEventListener("click", function() {
+				nextfour();
+			});
+		}
+
+
+		function nextfour() {
+			document.getElementById('question').innerHTML = "6. What comes to your mind on self discipline?";
+			document.getElementById('option1').innerHTML = "A. Wow! What a great habit, I hope I have this";
+			document.getElementById('option2').innerHTML = "B. A disciplined man is one who is always busy, and tries to detach himself from obstacles";
+			document.getElementById('option3').innerHTML = "C. Oh it is so tough! I wish I could have this easily";
+
+			document.getElementById('nextbtn').addEventListener("click", function() {
+				nextfive();
+			});
+
+
+		}
+		 //end of nextfour
+
+
+		 function nextfive() {
+		 	document.getElementById('question').innerHTML = "7. What kind of routine do you have?";
+			document.getElementById('option1').innerHTML = "A. A strict one";
+			document.getElementById('option2').innerHTML = "B. Have a clear one, but it changes mostly";
+			document.getElementById('option3').innerHTML = "C. Whatever you wish, Is the supreme wish, Do the wish, Be the wish, No matter what it is, follow your wish";
+			document.getElementById('nextbtn').addEventListener("click", function() {
+				nextsix();
+			});
+		 }
+
+		 function nextsix() {
+		 	document.getElementById('question').innerHTML = "8.Lets say for some health reasons you need to eat bitter gourd (raw and bitter, peeled)";
+			document.getElementById('option1').innerHTML = "A. I will do it and prove the world I am not anyone who cares of taste";
+			document.getElementById('option2').innerHTML = "B. Ugh... Eat it slowly while mmaking faces";
+			document.getElementById('option3').innerHTML = "C. Escape it somehow";
+			document.getElementById('nextbtn').addEventListener("click", function() {
+				nextseven();
+			});
+		 }
+
+		 function nextseven() {
+		 	document.getElementById('question').innerHTML = "9. When doing extreme hard work";
+			document.getElementById('option1').innerHTML = "A. I will hit the bullseye, only then will I rest! Eyes on the prize!";
+			document.getElementById('option2').innerHTML = "B. Do it without heart trying to focus on it";
+			document.getElementById('option3').innerHTML = "C. Somehow try to keep away from it and get the prize";
+			document.getElementById('nextbtn').addEventListener("click", function() {
+				nexteight();
+			});
+		 }
+
+		 function nexteight() {
+		 	document.getElementById('question').innerHTML = "10. Do you Rely on willpower as primary strategy?";
+			document.getElementById('option1').innerHTML = "A. Rarely";
+			document.getElementById('option2').innerHTML = "B. Sometimes";
+			document.getElementById('option3').innerHTML = "C. More than B";
+			document.getElementById('nextbtn').addEventListener("click", function() {
+				nextnine();
+			});
+		 }
+		 function nextnine() {
+		 	document.getElementById('question').innerHTML = "11. How often do you need motivation?"
+		 	document.getElementById('option1').innerHTML = "A. Rarely";
+			document.getElementById('option2').innerHTML = "B. Sometimes";
+			document.getElementById('option3').innerHTML = "C. More than B";
+			document.getElementById('nextbtn').addEventListener("click", function() {
+				nextten();
+			});
+
+
+		 }
+
+		 function nextten() {
+		 	document.getElementById('question').innerHTML = "12. How honest were you overall?";
+		 	document.getElementById('option1').innerHTML = 'A. I firmly say "Yes!"';
+			document.getElementById('option2').innerHTML = "B. Uh Oh! What should I say!";
+			document.getElementById('option3').innerHTML = "C. No worries. God will save me";
+
+			document.getElementById('nextbtn').addEventListener("click", function() {
+				nexteleven();
+			});
+
+		 }
+
+		 function nexteleven() {
+		 	alert("All done, count your A, B and C. Now if you have more A, means you are the Elegant, if you have got more B, means you are the Miserable, if you have more C, means you are The Unbothered. \n If you have got more A, it means you are great! Keep it up! This does not mean you judge everyone. This quiz is the sole judge. Remember if you get too proud, and get too much of pride, that is also indiscipline, so to keep what you are proud of, keep going your normal way. How about we watch a moral story on overconfidence?")
+
+		 	document.getElementById('main').style.display = "none";
+		 	document.getElementById('utube').style.display ="block";
+		 }
+	</script>
+
+
+</body>
+</html>
